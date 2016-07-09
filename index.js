@@ -1,8 +1,8 @@
-import Container from './container'
-import Content from './content'
-import Footer from './footer'
-import Header from './header'
-import Overlay from './overlay'
+import Container from './src/container'
+import Content from './src/content'
+import Footer from './src/footer'
+import Header from './src/header'
+import Overlay from './src/overlay'
 
 
 module.exports = {

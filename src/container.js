@@ -59,11 +59,6 @@ export default class Container extends Component {
 	}
 	renderOverlay() {
 		if(Array.isArray(this.props.children)) {
-			console.log(_.find(this.props.children, function(item) {
-				if(item && item.type == Overlay) {
-					return true;
-				}
-			}));
 			return _.find(this.props.children, function(item) {
 				if(item && item.type == Overlay) {
 					return true;

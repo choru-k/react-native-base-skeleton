@@ -13,14 +13,14 @@ export default class Container extends Component {
 	renderHeader() {
 		if(Array.isArray(this.props.children)) {
 			return _.find(this.props.children, function(item) {
-				if(item && item.type == Header) {
+				if(item && (item.type == Header || item.props.header)) {
 					return true;
 				}
 			});
 		}
 
 		else {
-			if(this.props.children && this.props.children.type == Header) {
+			if(this.props.children && (this.props.children.type == Header || this.props.children.props.header) {
 				return this.props.children;
 			}
 		}
@@ -29,7 +29,7 @@ export default class Container extends Component {
 		if(Array.isArray(this.props.children)) {
 
 			return _.find(this.props.children, function(item) {
-				if(item && (item.type == Content)) {
+				if(item && (item.type == Content || item.props.content)) {
 
 					return true;
 				}
@@ -37,7 +37,7 @@ export default class Container extends Component {
 		}
 
 		else {
-			if(this.props.children && (this.props.children.type == Content)) {
+			if(this.props.children && (this.props.children.type == Content || this.props.children.props.content)) {
 				return this.props.children;
 			}
 		}
@@ -45,14 +45,14 @@ export default class Container extends Component {
 	renderFooter() {
 		if(Array.isArray(this.props.children)) {
 			return _.find(this.props.children, function(item) {
-				if(item && item.type == Footer) {
+				if(item && (item.type == Footer || item.props.footer)) {
 					return true;
 				}
 			});
 		}
 
 		else {
-			if(this.props.children && this.props.children.type == Footer) {
+			if(this.props.children && (this.props.children.type == Footer || this.props.children.props.footer)) {
 				return this.props.children;
 			}
 		}
@@ -60,14 +60,14 @@ export default class Container extends Component {
 	renderOverlay() {
 		if(Array.isArray(this.props.children)) {
 			return _.find(this.props.children, function(item) {
-				if(item && item.type == Overlay) {
+				if(item && (item.type == Overlay || item.props.overlay)) {
 					return true;
 				}
 			});
 		}
 
 		else {
-			if(this.props.children && this.props.children.type == Overlay) {
+			if(this.props.children && (this.props.children.type == Overlay || this.props.children.props.overlay)) {
 				return this.props.children;
 			}
 		}

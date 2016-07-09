@@ -65,7 +65,25 @@ class example extends Component {
   }
 }
 ```
+If you want to use custom component, just add attribute. header, content, footer, overlay.
 
+```js
+class example extends Component {
+  render() {
+    return (
+      <Container>
+        <CustomHeader header={true}>
+          <Text>header</Text>
+        </CustomHeader>
+        <CustomContent contnet={true}></CustomContent>
+        <CustomFooter footer={true}>
+          <Text>footer</Text>
+        </CustomFooter>
+        <CustomOverlay overlay={true}></CustomOverlay>
+      </Container>
+    )
+  }
+```
 
 ##styles
 ###default Header Style

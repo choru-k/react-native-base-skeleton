@@ -20,7 +20,7 @@ export default class Container extends Component {
 		}
 
 		else {
-			if(this.props.children && (this.props.children.type == Header || this.props.children.props.header) {
+			if(this.props.children && (this.props.children.type == Header || this.props.children.props.header)) {
 				return this.props.children;
 			}
 		}

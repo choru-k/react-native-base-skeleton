@@ -1,0 +1,111 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Cheol/Desktop/git-hub-fork/react-native-base-skeleton',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/Cheol/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-native-base-skeleton@0.0.2~prepublish: react-native-base-skeleton@0.0.2
+11 silly lifecycle react-native-base-skeleton@0.0.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package.tgz',
+12 verbose tar pack   '/Users/Cheol/Desktop/git-hub-fork/react-native-base-skeleton' ]
+13 verbose tarball /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package.tgz
+14 verbose folder /Users/Cheol/Desktop/git-hub-fork/react-native-base-skeleton
+15 verbose addLocalTarball adding from inside cache /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package.tgz
+16 verbose correctMkdir /Users/Cheol/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-native-base-skeleton@0.0.2
+18 verbose afterAdd /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/Cheol/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package/package.json written
+21 silly publish { name: 'react-native-base-skeleton',
+21 silly publish   description: 'make skeleton in react native',
+21 silly publish   keywords: [ 'react', 'native', 'react-native', 'skeleton' ],
+21 silly publish   version: '0.0.2',
+21 silly publish   private: false,
+21 silly publish   dependencies: { lodash: '~4.11.1' },
+21 silly publish   peerDependencies: { 'react-native': '>=0.26.0', react: '>=15.0.2' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-eslint': '^6.0.4',
+21 silly publish      eslint: '^2.9.0',
+21 silly publish      'eslint-plugin-react': '^5.0.1',
+21 silly publish      'eslint-plugin-react-native': '^1.0.0' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/g6ling/react-native-base-skeleton.git' },
+21 silly publish   main: 'index.js',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   homepage: 'https://github.com/g6ling/react-native-base-skeleton',
+21 silly publish   readme: '#react-native-base-skeleton\nmake skeleton in your react-native.<br/>\nThis component is based on [native-base](https://github.com/GeekyAnts/NativeBase)\n\n##Install\n`npm install react-native-base-skeleton`\n\n##Why use this\nnative-base has same component. But components are restrictions(ex: header has always 3 components, all components are NBComponent). If you want to use native-base\'s structure, this module is good.\n\n##Container\n  * All the components should be included within the Container.\n  * Container takes mainly four components: `<Header>`, `<Content>`, `<Footer>`, and `<Overlay>`\n\n##Header\n  * There can be only a single Header component into your Container\n  * Header can have custom style.\n\n##Footer\n  * There can be only a single Footer component into your Container\n  * Footer can have custom style.\n\n##Content\n  * There can be only a single Content component into your Container\n  * Content can have custom style, contentContainerStyle.\n  * Content is based on ScrollView\n\n##Overlay\n  * There can be only a single Overlay component into your Container\n  * Overlay can have custom style(default flex:0).\n  * This component has highest z-index.\n\n##Example\n```js\nimport React, {\n  Component\n} from \'react\'\n\nimport {\n  Text,\n} from \'react-native\'\n\nimport {\n  Container,\n  Header,\n  Content,\n  Footer,\n  Overlay\n} from \'react-native-base-skeleton\'\n\nclass example extends Component {\n  render() {\n    return (\n      <Container>\n        <Header>\n          <Text>header</Text>\n        </Header>\n        <Content></Content>\n        <Footer>\n          <Text>footer</Text>\n        </Footer>\n        <Overlay></Overlay>\n      </Container>\n    )\n  }\n}\n```\nIf you want to use custom component, just add attribute. header, content, footer, overlay.\n\n```js\nclass example extends Component {\n  render() {\n    return (\n      <Container>\n        <CustomHeader header={true}>\n          <Text>header</Text>\n        </CustomHeader>\n        <CustomContent contnet={true}></CustomContent>\n        <CustomFooter footer={true}>\n          <Text>footer</Text>\n        </CustomFooter>\n        <CustomOverlay overlay={true}></CustomOverlay>\n      </Container>\n    )\n  }\n```\n\n##styles\n###default Header Style\n```js\n{\n  backgroundColor: \'#0AA\',\n  justifyContent: (!Array.isArray(this.props.children)) ? \'center\' : \'space-between\',\n  flexDirection: \'row\',\n  alignItems: \'center\',\n  paddingHorizontal: 15,\n  paddingTop: (Platform.OS === \'ios\' ) ? 15 : 0,\n  shadowColor: \'#000\',\n  shadowOffset: {width: 0, height: 2},\n  shadowOpacity: 0.1,\n  shadowRadius: 1.5,\n  height: (Platform.OS === \'ios\' ) ? 70 : 55,\n  elevation: 2\n}\n```\n###default Footer Style\n```js\n{\n    shadowColor: \'#000\',\n    shadowOffset: {width: 0, height: 2},\n    shadowOpacity: 0.1,\n    shadowRadius: 1.5,\n    height: 55,\n    flexDirection: \'row\'\n}\n```\n\n###default content Style\n```js\nlet defaulContentContainerStyle= {\n  padding: 10,\n}\nlet defaultStyle = {\n  flex : 1,\n  backgroundColor: \'#fff\'\n}\n```\n\n###default Overlay Style\n```js\n{\n  flex: 0\n}\n```\n',
+21 silly publish   gitHead: 'd6dd7ff1a452f0b579b877ce2da6f209523225a5',
+21 silly publish   bugs: { url: 'https://github.com/g6ling/react-native-base-skeleton/issues' },
+21 silly publish   _id: 'react-native-base-skeleton@0.0.2',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '50f87ec57bcf6b9e396054425cb8b7e6b9fbfa73',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-native-base-skeleton
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-native-base-skeleton',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'react-native-base-skeleton',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-native-base-skeleton
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/Cheol/.npm/react-native-base-skeleton/0.0.2/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-native-base-skeleton
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 02:00:29
+33 verbose request using bearer token for auth
+34 verbose request id d4879853f5ac0e92
+35 http request PUT https://registry.npmjs.org/react-native-base-skeleton
+36 http 403 https://registry.npmjs.org/react-native-base-skeleton
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Sat, 09 Jul 2016 17:00:30 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-itm7420-ITM',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1468083629.740118,VS0,VE546',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/Cheol/.npm/registry.npmjs.org/react-native-base-skeleton on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.2." : react-native-base-skeleton
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid react-native-base-skeleton
+43 verbose cwd /Users/Cheol/Desktop/git-hub-fork/react-native-base-skeleton
+44 error Darwin 15.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.1.0
+47 error npm  v3.8.6
+48 error code E403
+49 error "You cannot publish over the previously published version 0.0.2." : react-native-base-skeleton
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

@@ -10,7 +10,7 @@ native-base has same component. But components are restrictions(ex: header has a
 
 ##Container
   * All the components should be included within the Container.
-  * Container takes mainly four components: <Header>, <Content>, <Footer>, and <Overlay>
+  * Container takes mainly four components: `<Header>`, `<Content>`, `<Footer>`, and `<Overlay>`
 
 ##Header
   * There can be only a single Header component into your Container

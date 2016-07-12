@@ -1,3 +1,6 @@
 .DS_Store
 .git*
 .idea
+.browse.VC.db
+.browse.VC.db-wal
+npm-debug.log

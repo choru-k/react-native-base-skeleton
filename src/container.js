@@ -1,12 +1,17 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, Dimensions} from 'react-native';
 import Header from './header';
 import Content from './content';
 import Footer from './footer';
 import Overlay from './overlay';
 import _ from 'lodash';
+
+
+const {
+  width, height
+} = Dimensions.get('window')
 
 export default class Container extends Component {
 
@@ -89,7 +94,7 @@ export default class Container extends Component {
 					{this.renderFooter()}
 				</View>
 
-				<View style={{flex: 0}}>
+				<View style={{flex: 0, position: 'absolute', bottom: 0, right: 0, width: width}}>
 					{this.renderOverlay()}
 				</View>
 			</View>

@@ -27,7 +27,7 @@ native-base has same component. But components are restrictions(ex: header has a
 
 ##Overlay
   * There can be only a single Overlay component into your Container
-  * Overlay can have custom style(default flex:0).
+  * Overlay can have custom style(default flex:0, position: 'absolute', width: window.width, height: 0, right: 0, bottom: 0).
   * This component has highest z-index.
 
 ##Example

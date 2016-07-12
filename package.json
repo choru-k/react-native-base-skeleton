@@ -7,7 +7,7 @@
     "react-native",
     "skeleton"
   ],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "dependencies": {
     "lodash": "~4.11.1"

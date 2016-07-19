@@ -23,7 +23,7 @@ export default class Content extends Component {
           : defaultStyle
         }
         contentContainerStyle=
-        {this.props.defaulContentContainerStyle
+        {this.props.contentContainerStyle
           ? this.props.contentContainerStyle
           : defaulContentContainerStyle}
           >

@@ -4,3 +4,5 @@
 .browse.VC.db
 .browse.VC.db-wal
 npm-debug.log
+.vscode/.browse.VC.db
+.vscode/.browse.VC.db-wal
